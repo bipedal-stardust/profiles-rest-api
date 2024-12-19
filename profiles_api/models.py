@@ -32,7 +32,7 @@ class UserProfileManager(BaseUserManager):
 
 
 
-class userProfile(AbstractBaseUser, PermissionsMixin):
+class UserProfile(AbstractBaseUser, PermissionsMixin):
     """Database modles for users in the system"""
     email = models.EmailField(max_length=255, unique=True)
     name = models.CharField(max_length=255)
