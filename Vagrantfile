@@ -15,6 +15,7 @@ Vagrant.configure("2") do |config|
  config.vm.box = "ubuntu/bionic64"
  config.vm.box_version = "~> 20200304.0.0"
  config.vm.boot_timeout = 600  # Increase timeout to 10 minutes
+ config.vm.synced_folder ".", "/vagrant"
 
  config.vm.network "forwarded_port", guest: 8000, host: 8000
 
