@@ -3,7 +3,7 @@
 set -e
 
 # TODO: Set to URL of git repo.
-PROJECT_GIT_URL='https://github.com/bipedal-stardust/profiles-rest-api.git'
+PROJECT_GIT_URL='https://github.com/project'
 
 PROJECT_BASE_PATH='/usr/local/apps/profiles-rest-api'
 
@@ -13,7 +13,7 @@ locale-gen en_GB.UTF-8
 # Install Python, SQLite and pip
 echo "Installing dependencies..."
 apt-get update
-apt-get install -y python3-dev python3-venv sqlite python-pip supervisor nginx git
+apt-get install -y python3-dev python3-venv sqlite3 python3-pip supervisor nginx git
 
 mkdir -p $PROJECT_BASE_PATH
 git clone $PROJECT_GIT_URL $PROJECT_BASE_PATH
